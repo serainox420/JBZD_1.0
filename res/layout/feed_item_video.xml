@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?cItemBarBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <pl.jbzd.core.ui.view.TextView android:id="@id/txtComments" style="@style/FeedItemComments" />
+    <ImageView android:id="@id/btnFavorite" style="@style/FeedButtonFavorite" />
+    <pl.jbzd.core.ui.view.TextView android:id="@id/txtTitle" app:font="BitterBold" style="@style/FeedItemTitle" />
+    <FrameLayout android:id="@id/imageContainer" style="@style/FeedItemImageContainer">
+        <com.github.rahatarmanahmed.cpv.CircularProgressView android:layout_width="73.0dip" android:layout_height="73.0dip" app:cpv_color="@color/navyBlueColorPrimary" app:cpv_thickness="2.0dip" app:cpv_indeterminate="true" app:cpv_animAutostart="true" style="@style/BaseFeedItemShowButton" />
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/image" app:actualImageScaleType="focusCrop" style="@style/FeedItemPicture" />
+        <FrameLayout android:id="@id/ytVideoPlayerContainer" android:visibility="invisible" android:clickable="true" style="@style/FeedItemVideo" />
+        <ImageView android:id="@id/btnShow" android:src="@drawable/btn_play_video" style="@style/FeedItemShowImage" />
+        <com.github.rahatarmanahmed.cpv.CircularProgressView android:id="@id/progressView" android:visibility="gone" android:layout_width="73.0dip" android:layout_height="73.0dip" app:cpv_color="#ffffffff" app:cpv_thickness="2.0dip" app:cpv_indeterminate="true" app:cpv_animAutostart="true" style="@style/BaseFeedItemShowButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnExpand" android:visibility="gone" app:font="RobotoMedium" style="@style/FeedItemExpandPicture" />
+    </FrameLayout>
+    <pl.jbzd.core.ui.view.TextView android:id="@id/btnVoteUp" android:layout_below="@id/imageContainer" app:font="RobotoBold" style="@style/FeedItemVoteUp" />
+    <ImageView android:id="@id/btnMore" android:layout_below="@id/imageContainer" style="@style/FeedItemMore" />
+    <pl.jbzd.core.ui.view.CenteredLikeButton android:id="@id/btnLike" android:layout_below="@id/imageContainer" style="@style/FeedIteLike" />
+</RelativeLayout>

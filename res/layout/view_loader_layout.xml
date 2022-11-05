@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.rahatarmanahmed.cpv.CircularProgressView android:id="@id/progressWheel" android:layout_width="80.0dip" android:layout_height="80.0dip" app:cpv_color="#ff000000" app:cpv_indeterminate="true" app:cpv_animAutostart="true" />
+    <pl.jbzd.core.ui.view.TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:font="RobotoRegular" />
+</merge>

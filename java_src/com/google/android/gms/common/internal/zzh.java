@@ -1,0 +1,177 @@
+package com.google.android.gms.common.internal;
+
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.support.v4.f.k;
+import android.text.TextUtils;
+import android.util.Log;
+import com.google.android.gms.R;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.internal.zzadg;
+/* loaded from: classes2.dex */
+public final class zzh {
+    private static final k<String, String> zzaFE = new k<>();
+
+    private static String zzB(Context context, String str) {
+        synchronized (zzaFE) {
+            String str2 = zzaFE.get(str);
+            if (str2 != null) {
+                return str2;
+            }
+            Resources remoteResource = GooglePlayServicesUtil.getRemoteResource(context);
+            if (remoteResource == null) {
+                return null;
+            }
+            int identifier = remoteResource.getIdentifier(str, "string", "com.google.android.gms");
+            if (identifier == 0) {
+                String valueOf = String.valueOf(str);
+                Log.w("GoogleApiAvailability", valueOf.length() != 0 ? "Missing resource: ".concat(valueOf) : new String("Missing resource: "));
+                return null;
+            }
+            String string = remoteResource.getString(identifier);
+            if (!TextUtils.isEmpty(string)) {
+                zzaFE.put(str, string);
+                return string;
+            }
+            String valueOf2 = String.valueOf(str);
+            Log.w("GoogleApiAvailability", valueOf2.length() != 0 ? "Got empty resource: ".concat(valueOf2) : new String("Got empty resource: "));
+            return null;
+        }
+    }
+
+    public static String zzaT(Context context) {
+        String str = context.getApplicationInfo().name;
+        if (TextUtils.isEmpty(str)) {
+            String packageName = context.getPackageName();
+            try {
+                return zzadg.zzbi(context).zzdA(context.getPackageName()).toString();
+            } catch (PackageManager.NameNotFoundException e) {
+                return packageName;
+            }
+        }
+        return str;
+    }
+
+    public static String zzg(Context context, int i) {
+        Resources resources = context.getResources();
+        switch (i) {
+            case 1:
+                return resources.getString(R.string.common_google_play_services_install_title);
+            case 2:
+                return resources.getString(R.string.common_google_play_services_update_title);
+            case 3:
+                return resources.getString(R.string.common_google_play_services_enable_title);
+            case 4:
+            case 6:
+            case 18:
+                return null;
+            case 5:
+                Log.e("GoogleApiAvailability", "An invalid account was specified when connecting. Please provide a valid account.");
+                return zzB(context, "common_google_play_services_invalid_account_title");
+            case 7:
+                Log.e("GoogleApiAvailability", "Network error occurred. Please retry request later.");
+                return zzB(context, "common_google_play_services_network_error_title");
+            case 8:
+                Log.e("GoogleApiAvailability", "Internal error occurred. Please see logs for detailed information");
+                return null;
+            case 9:
+                Log.e("GoogleApiAvailability", "Google Play services is invalid. Cannot recover.");
+                return null;
+            case 10:
+                Log.e("GoogleApiAvailability", "Developer error occurred. Please see logs for detailed information");
+                return null;
+            case 11:
+                Log.e("GoogleApiAvailability", "The application is not licensed to the user.");
+                return null;
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 19:
+            default:
+                Log.e("GoogleApiAvailability", new StringBuilder(33).append("Unexpected error code ").append(i).toString());
+                return null;
+            case 16:
+                Log.e("GoogleApiAvailability", "One of the API components you attempted to connect to is not available.");
+                return null;
+            case 17:
+                Log.e("GoogleApiAvailability", "The specified account could not be signed in.");
+                return zzB(context, "common_google_play_services_sign_in_failed_title");
+            case 20:
+                Log.e("GoogleApiAvailability", "The current user profile is restricted and could not use authenticated features.");
+                return zzB(context, "common_google_play_services_restricted_profile_title");
+        }
+    }
+
+    public static String zzh(Context context, int i) {
+        String zzB = i == 6 ? zzB(context, "common_google_play_services_resolution_required_title") : zzg(context, i);
+        return zzB == null ? context.getResources().getString(R.string.common_google_play_services_notification_ticker) : zzB;
+    }
+
+    public static String zzi(Context context, int i) {
+        Resources resources = context.getResources();
+        String zzaT = zzaT(context);
+        switch (i) {
+            case 1:
+                return resources.getString(R.string.common_google_play_services_install_text, zzaT);
+            case 2:
+                return com.google.android.gms.common.util.zzj.zzba(context) ? resources.getString(R.string.common_google_play_services_wear_update_text) : resources.getString(R.string.common_google_play_services_update_text, zzaT);
+            case 3:
+                return resources.getString(R.string.common_google_play_services_enable_text, zzaT);
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 19:
+            default:
+                return resources.getString(R.string.common_google_play_services_unknown_issue, zzaT);
+            case 5:
+                return zzo(context, "common_google_play_services_invalid_account_text", zzaT);
+            case 7:
+                return zzo(context, "common_google_play_services_network_error_text", zzaT);
+            case 9:
+                return resources.getString(R.string.common_google_play_services_unsupported_text, zzaT);
+            case 16:
+                return zzo(context, "common_google_play_services_api_unavailable_text", zzaT);
+            case 17:
+                return zzo(context, "common_google_play_services_sign_in_failed_text", zzaT);
+            case 18:
+                return resources.getString(R.string.common_google_play_services_updating_text, zzaT);
+            case 20:
+                return zzo(context, "common_google_play_services_restricted_profile_text", zzaT);
+        }
+    }
+
+    public static String zzj(Context context, int i) {
+        return i == 6 ? zzo(context, "common_google_play_services_resolution_required_text", zzaT(context)) : zzi(context, i);
+    }
+
+    public static String zzk(Context context, int i) {
+        Resources resources = context.getResources();
+        switch (i) {
+            case 1:
+                return resources.getString(R.string.common_google_play_services_install_button);
+            case 2:
+                return resources.getString(R.string.common_google_play_services_update_button);
+            case 3:
+                return resources.getString(R.string.common_google_play_services_enable_button);
+            default:
+                return resources.getString(17039370);
+        }
+    }
+
+    private static String zzo(Context context, String str, String str2) {
+        Resources resources = context.getResources();
+        String zzB = zzB(context, str);
+        if (zzB == null) {
+            zzB = resources.getString(R.string.common_google_play_services_unknown_issue);
+        }
+        return String.format(resources.getConfiguration().locale, zzB, str2);
+    }
+}

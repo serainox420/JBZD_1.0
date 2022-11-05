@@ -1,0 +1,39 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: JBZD_1.0_Apkpure.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '16'
+  targetSdkVersion: '25'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  MASTMRAIDController.js: '8'
+  build-data.properties: '8'
+  close_button.png: '8'
+  ic_action_back.png: '8'
+  ic_action_cancel.png: '8'
+  ic_action_forward.png: '8'
+  ic_action_refresh.png: '8'
+  ic_action_web_site.png: '8'
+  fabric/com.crashlytics.sdk.android.answers.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  html/ssl_error.html: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.6.1
+versionInfo:
+  versionCode: '3'
+  versionName: '1.0'

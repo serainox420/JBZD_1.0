@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/dialog" style="@style/DialogInner">
+        <pl.jbzd.core.ui.view.TextView android:id="@id/title" android:text="@string/popup_memory_cleared" app:font="RobotoRegular" style="@style/PopUpTitle" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/button" android:text="@string/popup_ok" android:layout_below="@id/title" app:font="RobotoMedium" style="@style/PopUpButton" />
+    </RelativeLayout>
+</FrameLayout>

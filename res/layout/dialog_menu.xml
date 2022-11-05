@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:padding="0.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/dialog" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:layout_alignParentBottom="true">
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnShare" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/context_menu_share" app:font="RobotoMedium" style="@style/MenuDialogButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnCopy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/context_menu_copy" app:font="RobotoMedium" style="@style/MenuDialogButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnSave" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/context_menu_save" app:font="RobotoMedium" style="@style/MenuDialogButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnCancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/context_menu_cancel" app:font="RobotoMedium" style="@style/MenuDialogButton" />
+    </LinearLayout>
+</RelativeLayout>

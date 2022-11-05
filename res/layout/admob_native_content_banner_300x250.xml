@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.formats.NativeContentAdView android:background="#ffffffff" android:layout_width="300.0dip" android:layout_height="250.0dip" android:minWidth="300.0dip" android:minHeight="250.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="300.0dip" android:layout_height="50.0dip">
+            <ImageView android:id="@id/iconView" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/titleView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/adDescriptionView" android:layout_width="300.0dip" android:layout_height="40.0dip" android:lines="2" />
+        <ImageView android:id="@id/mainImageView" android:layout_width="300.0dip" android:layout_height="125.0dip" android:scaleType="centerCrop" />
+        <Button android:textAppearance="?android:textAppearanceMedium" android:id="@id/CTA_view" android:background="#ff669900" android:layout_width="300.0dip" android:layout_height="35.0dip" />
+    </LinearLayout>
+</com.google.android.gms.ads.formats.NativeContentAdView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/TranslucentDialogOuter"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/dialog" style="@style/DialogOuter">
+        <ScrollView android:scrollbars="none" style="@style/DialogInner">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <pl.jbzd.core.ui.view.TextView android:id="@id/title" android:text="@string/signup_title" app:font="RobotoRegular" style="@style/PopUpTitle" />
+                <pl.jbzd.core.ui.view.EditText android:id="@id/login" android:hint="@string/signup_placeholder_login" android:layout_below="@id/title" android:inputType="text" app:font="RobotoRegular" style="@style/PopUpEdiText2" />
+                <pl.jbzd.core.ui.view.EditText android:id="@id/email" android:hint="@string/signup_placeholder_email" android:layout_below="@id/login" android:inputType="textEmailAddress" app:font="RobotoRegular" style="@style/PopUpEdiText2" />
+                <pl.jbzd.core.ui.view.EditText android:id="@id/password" android:hint="@string/signup_placeholder_password" android:layout_below="@id/email" android:inputType="textPassword" app:font="RobotoRegular" style="@style/PopUpEdiText2" />
+                <pl.jbzd.core.ui.view.EditText android:id="@id/passwordConfirm" android:hint="@string/signup_placeholder_password_confirm" android:layout_below="@id/password" android:inputType="textPassword" app:font="RobotoRegular" style="@style/PopUpEdiText2" />
+                <pl.jbzd.core.ui.view.TextView android:id="@id/btnSignup" android:layout_marginTop="12.0dip" android:text="@string/signup_cta" android:layout_below="@id/passwordConfirm" app:font="RobotoMedium" style="@style/PopUpButton" />
+                <pl.jbzd.core.ui.view.TextView android:textColor="?cTextColorDark" android:gravity="center_horizontal" android:id="@id/term" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="2.0dip" android:text="@string/signup_terms" android:layout_below="@id/btnSignup" />
+                <pl.jbzd.core.ui.view.TextView android:textColor="?colorAccent" android:gravity="center_horizontal" android:id="@id/btnTerm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/signup_terms_btn" android:layout_below="@id/term" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_below="@id/btnTerm">
+                    <pl.jbzd.core.ui.view.TextView android:textSize="@dimen/text_size_xs" android:id="@id/btnLogin" android:layout_width="0.0dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="8.0dip" android:text="@string/signup_login_button" android:layout_weight="1.0" app:font="RobotoMedium" style="@style/DefaultButton" />
+                    <pl.jbzd.core.ui.view.TextView android:textSize="@dimen/text_size_xs" android:id="@id/btnSignup2" android:layout_width="0.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="24.0dip" android:text="@string/signup_button_fb" android:layout_weight="1.0" app:font="RobotoMedium" style="@style/SocialButton" />
+                </LinearLayout>
+                <View android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/footer" />
+                <pl.jbzd.core.ui.view.LoaderLayout android:id="@id/loader" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/empty" android:layout_below="@id/title" app:loaderBackgroundColor="?cPopUpInnerBackground" app:loaderTextColor="?cTextColorDark" app:loaderIndicatorColor="?cTextColorDark" app:loaderIndicatorSize="@dimen/loader_layout_xsmall_loader_size" app:loaderIndicatorWidth="2.0dip" app:loaderTextSize="@dimen/text_size_sm" app:loaderTextMarginLeft="@dimen/loader_layout_loader_text_margin_horizontal" app:loaderTextMarginTop="@dimen/loader_layout_loader_margin_bottom" app:loaderTextMarginRight="@dimen/loader_layout_loader_text_margin_horizontal" app:loaderInitText="@string/signup_loading" />
+            </RelativeLayout>
+        </ScrollView>
+        <ImageView android:id="@id/close" style="@style/DialogCloseButton" />
+    </RelativeLayout>
+</FrameLayout>

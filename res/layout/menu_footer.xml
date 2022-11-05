@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <pl.jbzd.core.ui.view.TextView android:id="@id/btnFacebook" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/menu_social_facebook" android:drawableTop="@drawable/menu_item_facebook" app:font="RobotoMedium" style="@style/MenuFooterItem" />
+    <pl.jbzd.core.ui.view.TextView android:id="@id/btnInstagram" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/menu_social_instagram" android:drawableTop="@drawable/menu_item_instagram" app:font="RobotoMedium" style="@style/MenuFooterItem" />
+</LinearLayout>

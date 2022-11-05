@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/text_view" android:background="?selectableItemBackground" android:paddingLeft="@dimen/space.medium" android:paddingTop="@dimen/space.small" android:paddingRight="@dimen/space.medium" android:paddingBottom="@dimen/space.small" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textAllCaps="true" />
+    <View android:id="@id/separator" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/space.very_small" android:layout_marginBottom="@dimen/space.very_small" />
+</LinearLayout>

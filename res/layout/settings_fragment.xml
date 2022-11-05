@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/layDrawer" android:background="?cOuterBackground" android:paddingLeft="8.0dip" android:paddingTop="12.0dip" android:paddingRight="8.0dip" android:paddingBottom="12.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="?cOuterBackground" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <pl.jbzd.core.ui.view.TextView android:text="@string/settings_sm" app:font="RobotoMedium" style="@style/SettingsTitle" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnFacebookConnect" android:text="@string/settings_sm_fbconnect" app:font="RobotoBold" style="@style/SettingsSocialButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnFanpage" android:text="@string/settings_sm_fanpage" app:font="RobotoBold" style="@style/SettingsSocialButton" />
+        <pl.jbzd.core.ui.view.TextView android:text="@string/settings_commands" app:font="RobotoMedium" style="@style/SettingsTitle" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnFriends" android:text="@string/settings_commands_friends" app:font="RobotoBold" style="@style/SettingsDefaultButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnGooglePlay" android:text="@string/settings_commands_google_play" app:font="RobotoBold" style="@style/SettingsDefaultButton" />
+        <pl.jbzd.core.ui.view.TextView android:text="@string/settings_others" app:font="RobotoMedium" style="@style/SettingsTitle" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnNotifications" android:text="@string/settings_others_notifications" app:font="RobotoBold" style="@style/SettingsDefaultButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnClearMemory" android:text="@string/settings_others_clear_memory" app:font="RobotoBold" style="@style/SettingsDefaultButton" />
+        <pl.jbzd.core.ui.view.TextView android:id="@id/btnLoginLogout" android:text="@string/settings_others_login" app:font="RobotoBold" style="@style/SettingsDefaultButton" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+.class public abstract Lcom/openx/model/video/VideoInfo;
+.super Ljava/lang/Object;
+.source "VideoInfo.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Lcom/openx/model/video/SkipOffset;",
+        "AdBreaks:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

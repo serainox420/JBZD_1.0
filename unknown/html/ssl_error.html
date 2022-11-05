@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<head>
+    <title></title>
+    <style type="text/css">
+    body{
+        background-color: #fff;
+        margin: 25px;
+        color :gray;
+        font-size: 16px;
+        font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+    }
+    button{
+        /*background-color: #3399ff;*/
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        color : white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 6px 12px;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background-image: none;
+        border: 1px solid transparent;
+        /*border-radius: 4px;*/
+        font-size: 16px;
+        width: 100%;
+    }
+    .label1{
+        font-weight: bold;
+    }
+    a{
+        color:gray;
+    }
+    .warnicon{
+    	
+    }
+    .icon,
+    .icon::before,
+    .icon::after
+    {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    .icon {
+        font-size: 42px;
+        color: transparent;
+    }
+    .icon.warning {
+        display: inline-block;
+
+        top: 1.625em;
+
+        width: 1.15em;
+        height: 1.15em;
+
+        overflow: hidden;
+        border: none;
+        background-color: transparent;
+        border-radius: 0.625em;
+    }
+
+    .icon.warning::before {
+        content: "";
+        display: block;
+        top: -0.08em;
+        left: 0.0em;
+        position: absolute;
+        border: transparent 0.6em solid;
+        border-bottom-color: #fd3;
+        border-bottom-width: 1em;
+        border-top-width: 0;
+        box-shadow: #999 0 1px 1px;
+    }
+
+    .icon.warning::after {
+        display: block;
+        position: absolute;
+        top: 0.3em;
+        left: 0;
+        width: 100%;
+        padding: 0 1px;
+        text-align: center;
+        content: "!";
+        font-size: 0.65em;
+        font-weight: bold;
+        color: #333;
+    }
+.warningText{
+ font-size:18px;
+ color:black;
+ text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+<table><tr><td><span class="icon warning"></span></td><td valign="middle"><label class="warningText"></label></td></tr></table>
+<br/><br/><br/><br/>
+<p>This server could not prove that it is <label class="label1" id="domainname1"></label>; its security certificate is not trusted by your device's operating system. This may be caused by a misconfiguration or an attacker intercepting your connection.</p>
+<p><br/>
+    <a href="#" onclick="proceedLinkClicked();">PROCEED TO <label id="domainname2"></label> (UNSAFE)</a>
+</p><br/><br/><br/><br/>
+<button onclick="backButtonClicked();">BACK TO SAFTY</button>
+<script>
+function proceedLinkClicked() {
+    JsHandler.onProceedClicked();
+}
+
+function backButtonClicked() {
+    JsHandler.onBackClicked();
+}
+
+function setHostName(name){
+console.error("Console Host name is set to "+name);
+var  domainname = name;
+document.getElementById("domainname1").innerHTML = name;
+name = name.toUpperCase();
+document.getElementById("domainname2").innerHTML = name;
+}
+</script>
+</body>
+</html>

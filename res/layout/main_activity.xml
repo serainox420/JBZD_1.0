@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/layDrawer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/ToolbarStyle">
+            <pl.jbzd.core.ui.view.TextView android:id="@id/txtToolbarTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:font="RobotoMedium" style="@style/ToolbarText" />
+        </android.support.v7.widget.Toolbar>
+        <FrameLayout android:id="@id/fragmentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <include android:id="@id/rvMenu" layout="@layout/menu" />
+</android.support.v4.widget.DrawerLayout>

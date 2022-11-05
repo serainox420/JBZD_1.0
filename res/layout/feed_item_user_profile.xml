@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/user_profile_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/avatar" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="6.0dip" app:placeholderImage="@drawable/avatar" app:actualImageScaleType="focusCrop" />
+    <pl.jbzd.core.ui.view.TextView android:textSize="24.0sp" android:textColor="#ffffffff" android:id="@id/txtUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Username" android:textAllCaps="true" app:font="BitterBold" />
+    <View android:background="#ffffffff" android:layout_width="110.0dip" android:layout_height="1.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="12.0dip" />
+</LinearLayout>

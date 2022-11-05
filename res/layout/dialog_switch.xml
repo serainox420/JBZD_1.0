@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/dialog" style="@style/DialogInner">
+        <pl.jbzd.core.ui.view.TextView android:id="@id/title" android:text="@string/popup_notifications" app:font="RobotoRegular" style="@style/PopUpTitle" />
+        <pl.jbzd.core.ui.view.toggleswitch.ToggleSwitch android:textSize="@dimen/text_size_sm" android:id="@id/mySwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_centerHorizontal="true" app:toggleWidth="100.0dip" app:textToggleLeft="OFF" app:textToggleRight="ON" app:activeBgColor="@color/navyBlueColorPrimary" app:activeTextColor="@android:color/white" app:inactiveBgColor="#ff222222" app:inactiveTextColor="#ff555555" app:separatorColor="@color/navyBlueButtonDefaultTextColor" />
+    </RelativeLayout>
+</FrameLayout>

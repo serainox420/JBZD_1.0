@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.formats.NativeContentAdView android:background="#ffffffff" android:layout_width="768.0dip" android:layout_height="90.0dip" android:minWidth="768.0dip" android:minHeight="90.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iconView" android:layout_width="90.0dip" android:layout_height="90.0dip" android:scaleType="fitCenter" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/titleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/adDescriptionView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="3" />
+        </LinearLayout>
+        <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/CTA_view" android:background="#ff669900" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+</com.google.android.gms.ads.formats.NativeContentAdView>
